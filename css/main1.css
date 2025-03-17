@@ -1,0 +1,64 @@
+/* css custom properties -> "css kintamieji" */
+* {
+    box-sizing: border-box;
+}
+/*
+--main-red: #9b1010;
+background-color: var(--main-red);
+*/
+body {
+}
+header,
+main,
+footer {
+    --w: 500px;
+    width: var(--w);
+    margin: 0 calc((100% - var(--w)) / 2);
+    /*margin-left: calc(50% - 400px); */
+}
+header > img {
+}
+/* 
+background-color: #ff000080;
+    background-color: rgba(255, 0, 0, 0.5); paskutinis skaicius rodo permatomuma
+WEBP < JPG < PNG
+JPG:rgb
+PNG:rgba
+WEBP:rgba
+*/
+nav {
+}
+nav > a {
+}
+nav > a:hover {
+}
+main {
+}
+main > div {
+}
+div > p:nth-of-type(1) {
+}
+div > p:nth-of-type(2) {
+}
+div > p:nth-of-type(3) {
+}
+div > div:nth-of-type(1) {
+}
+
+div > div:nth-of-type(2) {
+}
+div > div:nth-of-type(2) > a:first-child {
+}
+div > div:nth-of-type(2) > a:last-child {
+}
+main > img {
+}
+footer {
+}
+footer > div {
+}
+footer > div > a {
+}
+
+footer > p {
+}
