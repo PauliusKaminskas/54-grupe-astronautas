@@ -1,4 +1,28 @@
 /* css custom properties -> "css kintamieji" */
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/static/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/static/Roboto-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/static/Roboto-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/static/Roboto-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
 * {
     box-sizing: border-box;
 }
@@ -7,20 +31,17 @@
 background-color: var(--main-red);
 */
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-        sans-serif;
+    font-family: Roboto;
     color: #333;
 }
-header,
-main,
-footer {
+.container {
     --w: 800px;
     width: var(--w);
     margin: 40px calc((100% - var(--w)) / 2) 0;
     /*margin-left: calc(50% - 400px); */
     display: inline-block;
 }
-header > img {
+.logo {
     float: left;
     height: 40px;
 }
@@ -32,12 +53,11 @@ JPG:rgb
 PNG:rgba
 WEBP:rgba
 */
-header {
-}
-nav {
+
+.main-nav {
     float: right;
 }
-nav > a {
+.nav-link {
     float: left;
     font-size: 20px;
     line-height: 20px;
@@ -47,25 +67,28 @@ nav > a {
     margin-left: 30px;
     cursor: pointer;
 }
-nav > a:first-child {
+.nav-link:first-child {
     margin-left: 0;
 }
-nav > a:hover {
+.nav-link:hover {
     text-decoration: underline;
     color: #000;
 }
-main {
-}
-main > div {
+
+.left-column {
     width: 40%;
     float: left;
     margin-top: 25px;
 }
-div > p:nth-of-type(1) {
+.main-title {
     font-size: 60px;
     margin: 0;
+    font-family: Roboto;
+    font-weight: bold;
+    font-style: normal;
 }
-div > p:nth-of-type(2) {
+
+.sub-title {
     font-size: 50px;
     margin: 0;
     font-weight: bold;
@@ -73,19 +96,19 @@ div > p:nth-of-type(2) {
 main:hover > div > p:nth-of-type(2) {
     color: red;
 }
-div > p:nth-of-type(3) {
+.description {
     color: #555;
 }
-div > div:nth-of-type(1) {
+.line {
     width: 100px;
     height: 3px;
     background-color: #649;
 }
 
-div > div:nth-of-type(2) {
+.btn-group {
     display: inline-block;
 }
-div > div:nth-of-type(2) > a:first-child {
+.btn {
     float: left;
     font-size: 20px;
     line-height: 20px;
@@ -98,30 +121,19 @@ div > div:nth-of-type(2) > a:first-child {
     font-weight: bold;
     border: 3px solid #649;
     user-select: none;
-}
-div > div:nth-of-type(2) > a:last-child {
-    float: left;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 15px 30px;
-    margin-left: 20px;
-    border-radius: 30px;
-    color: #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: 3px solid #649;
-    user-select: none;
-}
-div > div:nth-of-type(2) > a {
     box-shadow: 0px 4px 8px 0px #0006;
 }
-div > div:nth-of-type(2) > a:hover {
+.btn.btn-white {
+    color: #333;
+    background-color: #fff;
+}
+
+.btn:hover {
     box-shadow: 0px 6px 12px 0px #0008;
     color: red;
     border-radius: 0;
 }
-main > img {
+.right-column {
     width: 60%;
     float: right;
 }
@@ -129,14 +141,14 @@ footer {
     display: inline-block;
     margin-bottom: 20px;
 }
-footer > div {
+.social-group {
     float: left;
 }
-footer > div > a {
+.social-link {
     color: #333;
 }
 
-footer > p {
+.copyright {
     margin: 0;
     float: right;
 }
