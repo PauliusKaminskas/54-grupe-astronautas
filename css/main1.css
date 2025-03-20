@@ -147,7 +147,14 @@ footer {
 .social-link {
     color: #333;
 }
-
+.social-link {
+    font-size: 20px;
+    color: #ccc;
+    margin-right: 20px;
+}
+.social-link:last-child {
+    margin-right: 0;
+}
 .copyright {
     margin: 0;
     float: right;
